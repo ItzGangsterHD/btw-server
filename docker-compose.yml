@@ -1,0 +1,12 @@
+services:
+    instance:
+        build: .
+        image: btw-server
+        user: "1000:1000"
+        ports:
+            - "25565:25565"
+        volumes:
+            - ${PWD}/config/server.properties:/opt/server/server.properties
+            - ${PWD}/config/white-list.txt:/opt/server/white-list.txt
+            - ${PWD}/world/:/opt/server/world/
+        restart: unless-stopped
