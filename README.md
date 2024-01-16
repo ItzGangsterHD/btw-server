@@ -68,7 +68,7 @@ To restart it:
 docker restart btw-server
 ```
 
-To view the log:
+To view the logs:
 
 ```
 docker logs -f btw-server
