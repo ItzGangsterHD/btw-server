@@ -2,7 +2,7 @@ A **Docker** project to build the **Better Than Wolves** Minecraft server
 
 [Official Better Than Wolves Wiki](https://wiki.btwce.com/index.php?title=Main_Page)
 
-This project is an updated version of [this](GencoreOperative/btw-server) project.
+This project is an updated version of [this](https://github.com/GencoreOperative/btw-server) project.
 
 
 ## Requirements
@@ -75,7 +75,7 @@ docker volume ls
 
 ## Backup
 
-The world data is stored within a Docker volume called `world` or `btw-server_world` (if running with `docker-compose`) and the configuration/mods are stored in `data` or `btw-server_data respectively.
+The world data is stored within a **Docker** volume called `world` or `btw-server_world` (if running with `docker-compose`) and the configuration/mods are stored in `data` or `btw-server_data` respectively.
 
 If we want to back up a volume, we can do:
 
@@ -83,7 +83,7 @@ If we want to back up a volume, we can do:
 docker run -it --rm -v <volume_name>:/volume -v "$(pwd)":/backup alpine tar cjf /backup/backup.tar.bz2 -C /volume ./
 ```
 
-This will create a `backup.tar.bz2` file in your local folder
+This will create a `backup.tar.bz2` file in your local folder.
 
 You can change the volume name to match what you want to backup.
 
@@ -99,4 +99,3 @@ And then we can copy the backup data into the volume using:
 ```sh
 docker run -it --rm -v <volume_name>:/volume -v "$(pwd):/backup alpine tar xjvf /backup/backup.tar.bz2 -C /volume
 ```
-
