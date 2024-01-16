@@ -68,6 +68,12 @@ To restart it:
 docker restart btw-server
 ```
 
+To view the log:
+
+```
+docker logs -f btw-server
+```
+
 To list volumes (will be useful for backing up):
 ```sh
 docker volume ls
